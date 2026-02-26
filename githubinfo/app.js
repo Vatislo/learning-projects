@@ -33,7 +33,6 @@ const renderUser = (user) => {
             <p><span>E-mail:</span><span>${user.email === null ? "none data" : user.company }</span></p>
             <p><span>Followers:</span><span">${user.followers}</span></p>
             <p><span>Following:</span><span>${user.following}</span></p>
-            <p><span>Following:</span><span>${user.following}</span></p>
             <p><span>URL:</span> <span><a href="${user.html_url}">${user.html_url.replace(/^https?:\/\//, '')}</a></span></p>
             <p><span>Date sing up:</span> <span>${user.created_at.split('T')[0].split('-').reverse().join(':')}</span></p>
             <p><span>Public repos:</span> <span>${user.public_repos}</span></p>
