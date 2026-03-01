@@ -1,22 +1,38 @@
+const statisticsPanel = document.getElementById('statistics_panel')
 const start = document.getElementById('start')
 const game = document.getElementById('game')
 const time = document.getElementById('time')
 const result = document.getElementById('result')
-const timeH1 = document.getElementById('time-header')
 const resultH1 = document.getElementById('result-header')
 const inputTime = document.getElementById('game-time')
+
+const colors = [
+    "#FF5555", // red
+    "#FFB86C", // orange
+    "#F1FA8C", // yellow
+    "#50FA7B", // green
+    "#8BE9FD", // cyan
+    "#BD93F9", // purple
+    "#FF79C6"  // pink
+];
+
+const userWidthWindow = document.body.clientWidth
+const userHeightWindow = document.body.clientHeight
 
 let score = 0
 let isGameActive = false
 
+if (localStorage.score) {
+    result.textContent = localStorage.score
+} 
+
 const endGame = () => {
     isGameActive = false   
     game.innerHTML = ''
-    start.classList.remove("hide")
-    timeH1.classList.add("hide")
     resultH1.classList.remove("hide")
-    resultH1.innerHTML = score
-    inputTime.removeAttribute('disabled');
+    localStorage.score = score
+    result.innerHTML = score
+    statisticsPanel.style.top = '35%'
 }
 
 const getRandom = (min, max) => {
@@ -29,7 +45,7 @@ const gameBoxClick = (event) => {
     }
     if (event.target.classList.contains('gameCub')) {
         score++
-        game.innerHTML = '';
+        game.innerHTML = ''; 
         renderBox()
     }
 }
@@ -39,24 +55,22 @@ const renderBox = () => {
     const gameCub = document.createElement('div')
     gameCub.classList.add('gameCub')
     gameCub.getAttribute('id', 'game_cub')
-    const widthAndHeight = getRandom(40,50)
+    const widthAndHeight = getRandom(100,200)
     gameCub.style.width = `${widthAndHeight}px`
     gameCub.style.height = `${widthAndHeight}px`
-    gameCub.style.top = `${getRandom(50,250)}px`
-    gameCub.style.left = `${getRandom(50,250)}px`
-
+    gameCub.style.top = `${getRandom(50,userHeightWindow - 200)}px`
+    gameCub.style.left = `${getRandom(50,userWidthWindow - 200)}px`
+    gameCub.style.backgroundColor = colors[getRandom(0,colors.length)]
     game.append(gameCub)
     game.addEventListener('click', gameBoxClick);
 }
 
 const startGame = () => {
     isGameActive = true
-    start.classList.add("hide")
-    timeH1.classList.remove("hide")
     resultH1.classList.add("hide")
     score = 0
     time.textContent = inputTime.value
-    inputTime.disabled = true // подругому оно не заработало
+
     renderBox()
     let interval = setInterval(function(){ 
         let currentTime = time.textContent
@@ -70,7 +84,14 @@ const startGame = () => {
 }
 
 start.addEventListener('click', () => {
-    startGame()
-    
+    statisticsPanel.style.top = '-500px'
+    setTimeout(() => {
+        startGame()
+    }, 300);
+
 })
+
+console.log(document.body.clientWidth)
+
+
 

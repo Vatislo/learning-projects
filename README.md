@@ -1,4 +1,4 @@
-# Learning-projects
+## About
 
 This repository contains my educational projects.
 
@@ -7,6 +7,7 @@ This repository contains my educational projects.
 - [Country](https://vatislo.github.io/learning-projects/country)
 - [Weather](https://vatislo.github.io/learning-projects/weather)
 - [GitHub User Information](https://vatislo.github.io/learning-projects/githubinfo)
+- [Sleight of hand](https://vatislo.github.io/learning-projects/sleight-of-hand)
 
 ## Contact
 
