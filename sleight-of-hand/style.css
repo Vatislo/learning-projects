@@ -9,14 +9,6 @@
     --current-line: #6272A4;
     --selection: #44475A;
     --foreground: #F8F8F2;
-    --comment: #6272A4;
-    --red: #FF5555; 
-    --orange: #FFB86C;  
-    --yellow: #F1FA8C;
-    --green: #50FA7B;
-    --cyan: #8BE9FD;
-    --purple: #BD93F9;
-    --pink: #FF79C6;
 }
 
 body {
@@ -46,7 +38,7 @@ input, button {
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%) scale(1.5);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

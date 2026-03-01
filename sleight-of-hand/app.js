@@ -55,11 +55,11 @@ const renderBox = () => {
     const gameCub = document.createElement('div')
     gameCub.classList.add('gameCub')
     gameCub.getAttribute('id', 'game_cub')
-    const widthAndHeight = getRandom(100,200)
+    const widthAndHeight = getRandom(200,400)
     gameCub.style.width = `${widthAndHeight}px`
     gameCub.style.height = `${widthAndHeight}px`
-    gameCub.style.top = `${getRandom(50,userHeightWindow - 200)}px`
-    gameCub.style.left = `${getRandom(50,userWidthWindow - 200)}px`
+    gameCub.style.top = `${getRandom(50,userHeightWindow - 400)}px`
+    gameCub.style.left = `${getRandom(50,userWidthWindow - 400)}px`
     gameCub.style.backgroundColor = colors[getRandom(0,colors.length)]
     game.append(gameCub)
     game.addEventListener('click', gameBoxClick);
