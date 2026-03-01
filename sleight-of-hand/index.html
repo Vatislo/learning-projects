@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="app_header">
+            <h1 class="hide" id="time-header">Time game: <span id="time">5</span></h1>
+            <h1 id="result-header">Result game: <span id="result"></span></h1>
+        </div>
+        <div class="app_content">
+            <button class="btn" id="start">Start</button>
+            <div class="game" id="game"></div>
+           </div>
+        <div class="app_footer">
+            <div class="input">
+                <label for="game-time">Time game</label>
+                <input type="number" id="game-time" min="5" step="1" value="5">
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
