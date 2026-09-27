@@ -1,13 +1,14 @@
-function PostCard({ post }) {
+export function PostCard({ post, onOpen }) {
+  const { id, title, body, userId } = post
+
   return (
-    <article className="post-card">
-      <p className="post-card__id">Новость №{post.id}</p>
-      <h2 className="post-card__title">{post.title}</h2>
+    <article className="post-card" onClick={() => onOpen(post)}>
+      <p className="post-card__id">Новость №{id}</p>
+      <h2 className="post-card__title">{title}</h2>
+      <p className="post-card__body">{body}</p>
       <div className="post-card__footer">
-        <span className="post-card__author">Автор: пользователь {post.userId}</span>
+        <span className="post-card__author">Автор: пользователь {userId}</span>
       </div>
     </article>
   )
 }
-
-export default PostCard
