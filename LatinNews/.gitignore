@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # build output copy for the dist branch
-Latin News dist
+latinNewsDist

@@ -8,6 +8,7 @@ This repository contains my educational projects.
 - [Weather](https://vatislo.github.io/learning-projects/weather)
 - [GitHub User Information](https://vatislo.github.io/learning-projects/githubinfo)
 - [Sleight of hand](https://vatislo.github.io/learning-projects/sleight-of-hand)
+- [Latin News](https://vatislo.github.io/learning-projects/latinNewsDist)
 
 ## Contact
 
