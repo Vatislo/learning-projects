@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #282A36;
+    --current-line: #6272A4;
+    --selection: #44475A;
+    --foreground: #F8F8F2;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bolder;
+}
+
+input, button {
+    all:unset;
+    cursor: pointer;
+    background-color: #282A36;
+    border: var(--current-line) 1px solid;
+    border-radius: 5px;
+    max-width: 200px;
+    min-width: 100px;
+}
+
+.statistics_panel {
+    height: 200px;
+    max-width: 350px;
+    background-color: var(--selection);
+    border: var(--current-line) 1px solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%) scale(1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+    text-align: center;
+    transition-duration: 0.3s;
+    z-index: 1001;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.gameCub {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#time {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 30vh;
+    color: #44475A;
+}
+
+.hide {
+    display: none;
+}
